@@ -6,7 +6,8 @@ app.get('/', function(request, response)
 {
   var file = require('fs');
   var buffer = new buffer();
-  response.send(buffer.toString('utf-8', file.readFileSync("index.html")));
+  var string = buffer.toString('utf-8', file.readFileSync("index.html"));
+  response.send(string);
 });
 
 
